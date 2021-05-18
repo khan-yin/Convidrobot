@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI诊断</title>
+</head>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../layui-v2.5.6/layui/layui.js"></script>
+<link rel="stylesheet" href="../little-robot/little-robot.css" type="text/css">
+<link rel="stylesheet" href="doctor.css" type="text/css">
+<link rel="stylesheet" href="../news/news.css">
+<link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+<body>
+<div id="side-menu">
+    <little-robot></little-robot>
+</div>
+<div class="head">
+    <div class="home-logo">
+        <a href="../index.html">
+            <img src="../image/home.png" style="height: 25px;position: absolute;top: 17.5px;left: 20px">
+        </a>
+        <p >AI检测</p>
+    </div>
+</div>
+<div class="file-box">
+    <div class="button-box">
+        <form id="saveReportForm" enctype="multipart/form-data">
+            <a href="javascript:;" class="file-link">选择文件
+                <input type="file" name="img-file" id="img-file" accept="image/png,image/gif,image/jpg,image/jpeg,image/tif"
+                       onchange="javascript:setImagePreview();">
+            </a>
+            <input type="button" value="上传" id="upFileBtn" onclick='upload()'>
+        </form>
+    </div>
+    <div class="img-content">
+        <img src="../image/doctor-lung.png" class="photo" id="pre-photo">
+        <img src="../image/doctor-lung.png" id="color-photo" style="display: none;width: 100%;height: 100%;left: 0;top: 0;position: absolute">
+        <div class="change-img">
+            <img src="../image/compare.png">
+        </div>
+    </div>
+</div>
+<div class="side-box">
+    <div class="result-box">
+       <img id="face" src="../image/good.png" style="width: 120px;top: 20px;position: absolute">
+        <div class="result-text-box">
+            <h3 id="result-score">您还未上传文件</h3>
+            <p>测试结果仅供参考</p>
+        </div>
+    </div>
+    <div class="help-box">
+        <div class="link-box">
+            <a href="../chat/chat.html">
+                <img src="../image/chat-room.png" style="border-radius: 0" alt="">
+                <div class="link-name">小飞问诊</div>
+            </a>
+        </div>
+        <div class="link-box">
+            <a href="https://m.haodf.com/">
+                <img src="../image/haodaifu.jpg" alt="">
+                <div class="link-name">好大夫在线</div>
+            </a>
+        </div>
+        <div class="link-box">
+            <a href="https://status.ngarihealth.com/front/newpne.html">
+                <img src="../image/nali.png" alt="">
+                <div class="link-name">纳里健康</div>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="doctor.js"></script>
+</body>
+<script src="../little-robot/little-robot.js"></script>
+</html>

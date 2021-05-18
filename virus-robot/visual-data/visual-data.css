@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+}
+.buttons{
+    position: relative;
+    right: 60px;
+    float: left;
+}
+.notice-bar,.data-box,.chart{
+    display: flex;
+    justify-content: center;
+}
+.notice-bar{
+    position: absolute;
+}
+.notice-box{
+    overflow: hidden;
+    width: 1125px;
+    height: 50px;
+    background-color: white;
+}
+.notice{
+    animation: 20s wordsLoop linear infinite normal;
+}
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform: translateX(200px);
+        -webkit-transform: translateX(1100px);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+.data{
+    background-color: rgba(0,0,0,0.05);
+    height: 120px;
+    width: 217px;
+    margin-right: 10px;
+    margin-top: 80px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+}
+.data p{
+    position: relative;
+    top: 5px;
+    font-size: 35px;
+    color: #e55039;
+    font-weight: bold;
+}
+.data h1{
+    position: relative;
+    font-size: 13px;
+    font-weight: normal;
+    top: 10px;
+    color: rgb(99, 110, 114);
+}
+.map{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+.button{
+    background-color: rgba(0,0,0,0.05);
+    float: top;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+.button:hover{
+    background-color: rgba(0,0,0,0.07);
+}
+.button-this{
+    background-color: rgba(116,185,255,0.3);
+    color: #0984e3;
+}
+.button-this:hover{
+    background-color: rgba(116,185,255,0.3);
+    color: #0984e3;
+}

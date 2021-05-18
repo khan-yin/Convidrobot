@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="test.css">
+<script src="js/vue.js"></script>
+<script src="layui-v2.5.6/layui/layui.js"></script>
+<script src="js/jquery-3.4.1.js"></script>
+<body>
+<div class="heart-btn">
+	<!-- 内容 -->
+	<div class="content">
+		<!-- 爱心 -->
+		<span class="heart"></span>
+		<!-- 文字Liek -->
+		<span class="like">Like</span>
+		<!-- 数字 -->
+		<span class="numb"></span>
+	</div>
+</div>
+</body>
+<script>
+	$(document).ready(function() {
+		// 根据类名添加点击事件
+		$('.content').click(function() {
+			// 根据类切换类名
+			$(this).toggleClass('heart-active');
+			$('.like').toggleClass('heart-active');
+			$('.heart').toggleClass('heart-active');
+			$('.numb').toggleClass('heart-active')
+		})
+	})
+</script>
+</html>

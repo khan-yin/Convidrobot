@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5139c7b-8c6d-4ff8-aa30-4e186beaf4c4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ahCqE1504ZgY7LgdABLWcVAdBq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\12\Desktop\virus-robot\image" />
+      <recent name="C:\Users\12\Desktop\计算机设计\chat" />
+      <recent name="C:\Users\12\Desktop\计算机设计\image" />
+      <recent name="C:\Users\12\Desktop\计算机设计\js" />
+      <recent name="C:\Users\12\Desktop\计算机设计\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\12\Desktop\virus-robot\image" />
+      <recent name="C:\Users\12\Desktop\计算机设计" />
+      <recent name="C:\Users\12\Desktop\计算机设计\chat" />
+      <recent name="C:\Users\12\Desktop\计算机设计\little-robot" />
+      <recent name="C:\Users\12\Desktop\计算机设计\image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/virus-robot/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="data_add" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="计算机设计" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/data_add.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_chart" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="计算机设计" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/data_chart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_map" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="计算机设计" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/data_map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5139c7b-8c6d-4ff8-aa30-4e186beaf4c4" name="Default Changelist" comment="" />
+      <created>1587178626921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587178626921</updated>
+      <workItem from="1587178628055" duration="32640000" />
+      <workItem from="1587264756190" duration="33160000" />
+      <workItem from="1587332060932" duration="31391000" />
+      <workItem from="1587435265507" duration="7535000" />
+      <workItem from="1587461479546" duration="1905000" />
+      <workItem from="1587532054898" duration="6939000" />
+      <workItem from="1587567987265" duration="6401000" />
+      <workItem from="1587612171381" duration="7708000" />
+      <workItem from="1587636896990" duration="1861000" />
+      <workItem from="1587644331318" duration="7844000" />
+      <workItem from="1587715382542" duration="7266000" />
+      <workItem from="1587722961081" duration="7570000" />
+      <workItem from="1587803840606" duration="4284000" />
+      <workItem from="1587866811240" duration="3720000" />
+      <workItem from="1587919959715" duration="1454000" />
+      <workItem from="1588043685956" duration="1578000" />
+      <workItem from="1588911520155" duration="52000" />
+      <workItem from="1589898219136" duration="1200000" />
+      <workItem from="1589943906893" duration="3968000" />
+      <workItem from="1590630587525" duration="1936000" />
+      <workItem from="1590669450127" duration="113000" />
+      <workItem from="1590669571116" duration="4608000" />
+      <workItem from="1590723139031" duration="5113000" />
+      <workItem from="1590859177485" duration="85000" />
+      <workItem from="1590889864705" duration="9555000" />
+      <workItem from="1590976081012" duration="3207000" />
+      <workItem from="1591062882685" duration="602000" />
+      <workItem from="1591193491581" duration="87000" />
+      <workItem from="1591250977643" duration="1139000" />
+      <workItem from="1591259045540" duration="312000" />
+      <workItem from="1591262118204" duration="296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="503" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587220308935">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="503" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1587220308935" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589946898589">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1589946898589" />
+    <state x="270" y="59" key="SettingsEditor" timestamp="1590669808267">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="270" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1590669808267" />
+    <state x="490" y="159" width="540" height="524" key="StructurePopup" timestamp="1587316598232">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="490" y="159" width="540" height="524" key="StructurePopup/0.0.1536.834@0.0.1536.834" timestamp="1587316598232" />
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1587377713773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1587377713773" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1587316543382">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1587316543382" />
+  </component>
+</project>

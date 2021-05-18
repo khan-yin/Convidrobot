@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: #efeeee;
+}
+.message-content{
+    display: inline-block;
+    z-index: -100;
+    position: absolute;
+    left: 15%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 175%;
+}
+.message-box{
+    background-color: rgba(255,255,255,0.4);
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+    width: 65%;
+    margin-bottom: 0;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2);
+}
+.like{
+    text-align: center;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: relative;
+    left: 65%;
+    top: 60px;
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
+    z-index: 100;
+    border-radius: 50%;
+    background: url(../image/heart.png) no-repeat;
+    background-color: rgba(255,255,255,0.6);
+    background-size: 2900% 60px; /* 背景大小，因为有29个所以为2900 */
+    background-position: left;
+    cursor: pointer;
+    color: #576574;
+}
+@keyframes like{
+    /* 通过图片位置移动实现点赞效果 */
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+@keyframes unlike{
+    /* 通过图片位置移动实现点赞效果 */
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+.like-num{
+    font-size: 16px;
+    position: relative;
+    top: 65px;
+}
+.user{
+    position: relative;
+    height: 20px;
+}
+.user h3{
+    position: relative;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+.user-head{
+    position: absolute;
+    top:-15px;
+    left: 20px;
+    height: 60px;
+    border-radius: 50%;
+}
+.message-text{
+    color: black;
+    margin: 30px 50px 20px 100px;
+}
+.image-box{
+    position: relative;
+    display: grid;
+    grid-template-columns:repeat(2,50%);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-content: left;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 80%;
+    margin-right: 50px;
+    margin-left: auto;
+}
+.image-box img{
+    position: relative;
+    width:100%;
+}
+.send{
+    width: 60px;
+    height: 200px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #40739e;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2);
+    writing-mode: tb-rl;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 10px;
+    display: flex;
+    align-items: center;
+
+}

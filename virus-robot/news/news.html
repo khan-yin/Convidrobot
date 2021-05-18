@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>疫情报道</title>
+    <link rel="stylesheet" href="../little-robot/little-robot.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="../layui-v2.5.6/layui/css/layui.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/vue.js"></script>
+    <script src="../layui-v2.5.6/layui/layui.js"></script>
+</head>
+<body>
+<div id="side-menu">
+    <little-robot></little-robot>
+</div>
+<div class="head">
+    <div class="home-logo">
+        <a href="../index.html">
+            <img src="../image/home.png" style="height: 30px;position: absolute;top: 12.5px;left: 20px">
+        </a>
+        <p>疫情报道</p>
+    </div>
+</div>
+<div class="news-content">
+    <p class="news-head">热点新闻</p>
+    <p class="refresh" onclick="getNews()">换一批</p>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+    <div class="news-box">
+        <a href="" class="title">土耳其新增新冠肺炎确诊病例3977例 累计确诊86306例</a>
+        <p class="summary">当地时间4月19日晚，土耳其卫生部网站更新的数据...</p>
+        <p class="date">12分钟前 央视新闻app</p>
+    </div>
+</div>
+<div class="layui-carousel" id="news-show">
+    <div carousel-item="">
+        <div>
+            <a href="https://baijiahao.baidu.com/s?id=1667889302858121884&wfr=spider&for=pc">
+                <img style="height: 90%;width: 100%" src="https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1346522350,28154707&fm=173&app=49&size=f242,162&n=0&g=0n&f=JPEG?s=5E184B847477BF963F13009B0300C0A2&sec=1590717699&t=f9fc8cba93cb2ce5fe2c23eb3e32aed6">
+                <div class="carousel-text" >&nbsp;&nbsp;&nbsp;全球120多款候选新冠疫苗，谁更有希望？</div>
+            </a>
+        </div>
+        <div>
+            <a href="http://m.news.cctv.com/2020/05/13/ARTIMJiWH1YtbREtw5WGN3gz200513.shtml">
+                <img style="height: 90%;width: 100%" src="http://p1.img.cctvpic.com/cportal/cnews-yz/img/2020/05/13/1589376301991_850_640x400.jpg">
+                <div class="carousel-text">&nbsp;&nbsp;&nbsp;法国劳工部：鼓励复工复产 “部分失业”补贴将逐步缩减</div>
+            </a>
+        </div>
+        <div>
+            <a href="https://3w.huanqiu.com/a/34f321/3yPGd7xRhKm?agt=8">
+                <img style="height: 90%;width: 100%" src="http://contentcms-bj.cdn.bcebos.com/cmspic/40c8e2cd20c69ad76d616e55c0a061e3.jpeg?x-bce-process=image/crop,x_0,y_0,w_920,h_500">
+                <div class="carousel-text">&nbsp;&nbsp;&nbsp;青岛中小学3年级以上全部复课</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="word-cloud">
+    <div class="news-head">热门词条</div>
+    <img src="../image/word-cloud.png">
+</div>
+<script src="../little-robot/little-robot.js"></script>
+<script src="news.js"></script>
+</body>
+<script>
+    layui.use(['carousel'], function(){
+        var carousel = layui.carousel;
+        carousel.render({
+            elem: '#news-show'
+            ,arrow: 'always'
+            ,width:'30%'
+            ,height:'300px'
+        });
+    });
+</script>
+</html>

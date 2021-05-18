@@ -1,0 +1,100 @@
+body{
+    background-color: #efeeee;
+}
+.head{
+    position: fixed;
+    z-index: 100;
+    background-color: #34495e;
+    width: 100%;
+    height: 60px;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.1),
+    -18px -18px 30px rgba(255, 255, 255, 1);
+}
+.head p{
+    line-height: 60px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    width: 30%;
+    left: 120px;
+}
+.news-content{
+    z-index: -100;
+    height: auto;
+    position: absolute;
+    left: 15%;
+    top: 150px;
+    width: 30%;
+    border-top: 1px rgb(229,229,229) solid;
+}
+.news-head{
+    line-height: 30px;
+    position: relative;
+    bottom: 34px;
+    width: 25%;
+    border-bottom: 4px rgb(47,99,186) solid;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(47,99,186);
+}
+.refresh{
+    line-height: 30px;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    color: rgb(47,99,186);
+    cursor: pointer;
+}
+.news-box{
+    position: relative;
+    bottom: 34px;
+    height: 150px;
+    border-bottom: 1px rgb(229,229,229) solid;
+}
+.news-box a{
+    font-size: 130%;
+    font-weight: bold;
+    position: relative;
+    top:20px ;
+    cursor: pointer;
+}
+.news-box p{
+    color: rgb(100,100,100);
+    position: relative;
+    top: 30px;
+}
+.news-box .date{
+    position: absolute;
+    height: 50px;
+    font-size: 70%;
+    color: rgb(150,150,150);
+    right: 0;
+    top: 130px;
+}
+#news-show {
+    position: absolute;
+    left: 55%;
+    top: 150px;
+    width: 80%;
+    height: 30%;
+}
+.word-cloud{
+    position: absolute;
+    right: 15%;
+    width: 30%;
+    height: 500px;
+    top: 550px;
+    border-top: 1px rgb(229,229,229) solid;
+}
+.word-cloud img{
+    width: 100%;
+}
+.carousel-text{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}

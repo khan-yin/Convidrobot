@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心中有“数”</title>
+</head>
+<script src="../js/highmaps.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="visual-data.js"></script>
+<script src="../js/vue.js"></script>
+<link rel="stylesheet" href="visual-data.css" type="text/css">
+<link rel="stylesheet" href="../little-robot/little-robot.css" type="text/css">
+<link rel="stylesheet" href="../news/news.css">
+<body style="background-color: white">
+<div id="side-menu">
+    <little-robot></little-robot>
+</div>
+<div class="head">
+    <div class="home-logo">
+        <a href="../index.html">
+            <img src="../image/home.png" style="height: 25px;position: absolute;top: 17.5px;left: 20px">
+        </a>
+        <p >心中有“数”</p>
+    </div>
+</div>
+
+<div class="data-box">
+    <div class="data" style="background-color: rgba(250,177,160,0.2);color: #e55039">确诊
+        <p>9999</p>
+        <h1>1111</h1>
+    </div>
+    <div class="data"style="background-color: rgba(120, 224, 143,0.2);color: rgb(7, 153, 146)">治愈
+        <p style="color: rgb(7, 153, 146)">9999</p>
+        <h1>1111</h1>
+    </div>
+    <div class="data" style="background-color: rgba(113, 128, 147,0.3);color: rgb(47, 54, 64)">死亡
+        <p style="color: rgb(47, 54, 64)">9999</p>
+        <h1>1111</h1>
+    </div>
+    <div class="data" style="background-color: rgba(246, 229, 141,0.5);color: rgb(240, 147, 43)">疑似
+        <p style="color: rgb(240, 147, 43)">9999</p>
+        <h1>1111</h1>
+    </div>
+    <div class="data" style="background-color: rgba(207, 106, 135,0.3);color:rgb(196, 69, 105);">重症
+        <p style="color: rgb(196, 69, 105)">9999</p>
+        <h1>1111</h1>
+    </div>
+</div>
+<div class="chart" style="">
+    <div id="chart1" style="height: 300px;width: 1125px;"></div>
+</div>
+<div class="map" style="">
+    <div id="container1" style="height:450px; width: 49%;float:left;position: relative;left: 40px"></div>
+    <div id="container2" style="height:450px; width: 49%;float:left; display: none;position: relative;left: 40px"></div>
+    <div id="container3" style="height:450px; width: 49%;float:left; display: none;position: relative;left: 40px"></div>
+    <div class="buttons">
+        <div class="button button-this" id="button1">确诊</div>
+        <div class="button" id="button2">治愈</div>
+        <div class="button" id="button3">死亡</div>
+    </div>
+</div>
+</body>
+<script src="../little-robot/little-robot.js"></script>
+<script>
+    let buttons = document.querySelectorAll('.button');
+    buttons[0].onclick = function () {
+        $("#container1").show();
+        $("#container2").hide();
+        $('#container3').hide();
+        $('#button1').addClass('button-this');
+        $('#button2').removeClass('button-this');
+        $('#button3').removeClass('button-this');
+    };
+    buttons[1].onclick = function () {
+        $('#container2').show();
+        $('#container1').hide();
+        $('#container3').hide();
+        $('#button2').addClass('button-this');
+        $('#button1').removeClass('button-this');
+        $('#button3').removeClass('button-this');
+    };
+    buttons[2].onclick = function () {
+        $('#container3').show();
+        $('#container1').hide();
+        $('#container2').hide()
+        $('#button3').addClass('button-this');
+        $('#button2').removeClass('button-this');
+        $('#button1').removeClass('button-this');
+    };
+    $.ajax({
+        type: "get",//请求方式
+        url: "http://47.103.193.240:8000/robot/dataadd/\n",//地址，就是json文件的请求路径
+        dataType: "json",//数据类型可以为 text xml json  script  jsonp
+        async: false,
+        success: function(data){//返回的参数就是 action里面所有的有get和set方法的参数
+            data=JSON.parse(data);
+            var p = document.querySelectorAll('p');
+            var h = document.querySelectorAll('h1');
+            for (var i=1;i<6;i++){
+                p[i].innerText = data[i-1].value;
+                h[i-1].innerText='较上日：'+data[i-1].add;
+            }
+        }
+    });
+    $.ajax({
+        type: "get",//请求方式
+        url: "http://47.103.193.240:8000/robot/datachart/",//地址，就是json文件的请求路径
+        dataType: "json",//数据类型可以为 text xml json  script  jsonp
+        async: false,
+        success:function (data) {
+            data=JSON.parse(data);
+            Highcharts.setOptions({
+                colors: ['#d63031', '#ffeaa7', '#00b894','#636e72']
+            });
+            var chart = Highcharts.chart('chart1', {
+                credits:{
+                    enabled:false
+                },
+                title: {
+                    text: '疫情曲线图'
+                },
+                xAxis: {
+                    categories: data.date
+                },
+                yAxis: {
+                    title: {
+                        text: '人数/人'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                    }
+                },
+                series: [{
+                    name: '确诊',
+                    data: data.confirm
+                }, {
+                    name: '疑似',
+                    data: data.suspect
+                }, {
+                    name: '治愈',
+                    data: data.heal
+                },{
+                    name: '死亡',
+                    data: data.dead
+                }],
+                responsive: {
+                    rules: [{
+                        condition: {
+                            maxWidth: 500
+                        },
+                        chartOptions: {
+                            legend: {
+                                layout: 'horizontal',
+                                align: 'center',
+                                verticalAlign: 'bottom'
+                            }
+                        }
+                    }]
+                }
+            });
+        }
+    });
+</script>
+</html>

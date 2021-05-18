@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+/* 按钮主体 */
+.heart-btn {
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 距上部 */
+    left: 50%; /* 距左部 */
+    transform: translate(-50%, -50%); /* X,Y移动 */
+}
+/* 内容 */
+.content {
+    border: 2px solid #eae2e1; /* 边框 */
+    padding: 13px 16px; /* 内边距 */
+    border-radius: 5px; /* 边框圆角 */
+    display: flex; /* 弹性盒模型 */
+    cursor: pointer; /* 鼠标样式 */
+}
+.content.heart-active { /* 切换后样式 */
+    border-color: #f9b9c4; /* 修改边框颜色 */
+    background: #fbd0d8; /*  修改背景颜色*/
+}
+/* 内容爱心 */
+.content .heart {
+    height: 90px;/* 高度 */
+    width: 90px;/* 宽度 */
+    background: url(image/heart.png) no-repeat; /* 背景图片，不重复 */
+    background-position: left; /* 背景定位 */
+    background-size: 2900%; /* 背景大小，因为有29个所以为2900 */
+    position: absolute;
+    top: 50%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+}
+.heart.heart-active { /* 切换后样式 */
+    animation: animate  .8s steps(28) 1; /* 动画(名称, 事件, 逐帧播放, 一次) */
+    background-position: right; /* 保留定位在右侧 */
+}
+/* 执行动画 */
+@keyframes animate{
+    /* 通过图片位置移动实现点赞效果 */
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+/* 文字 */
+.like {
+    margin-left: 30px; /* 外边距 */
+    font-size: 21px; /* 字体大小 */
+    font-family: sans-serif;
+    color: grey; /* 字体颜色 */
+}
+.like.heart-active {
+    color: black;
+}
+/* 点赞数(模拟) */
+.numb::before {
+    content: '12'; /* 内容 */
+    font-size: 21px;
+    font-weight: 600; /* 维度 */
+    font-family: sans-serif;
+    color: #9c9496;
+    margin-left: 7px;
+}
+.numb.heart-active::before {
+    content: '13';
+    color: black;
+    transition: 0.8s;
+}

@@ -1,0 +1,124 @@
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="full-screen" content="yes">
+    <meta content="default" name="apple-mobile-web-app-status-bar-style">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="browsermode" content="application">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <base target="_blank">
+    <title>小飞聊天室</title>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="../little-robot/little-robot.css" type="text/css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/vue.js"></script>
+</head>
+<body lang="zh" style="background-color: #efeeee">
+<div class="abs cover contaniner">
+    <img src="../image/menu.png" style="height: 40px;position:absolute;left: 20px;top:5px;cursor: pointer;transition: 0.6s" id="open-menu" alt="">
+    <div class="go-home" >
+            <img src="../image/home-blue.png" style="height: 50%;color: black;position:relative;" alt="">
+    </div>
+    <div class="go-home" >
+            <img src="../image/news.png" style="height: 50%;color: black;position:relative;" alt="">
+    </div>
+    <div class="go-home" >
+            <img src="../image/AI.png" style="height: 50%;color: black;position:relative;" alt="">
+    </div>
+    <div class="go-home" >
+            <img src="../image/data.png" style="height: 50%;color: black;position:relative;" alt="">
+    </div>
+    <div class="go-home" >
+            <img src="../image/comment.png" style="height: 50%;color: black;position:relative;" alt="">
+    </div>
+    <div class="abs cover pnl">
+        <div class="top pnl-head">
+            <p style="line-height: 2.5em;color: white;font-size: 20px;position: absolute;left: 20px">小飞聊天室</p>
+        </div>
+        <div class="abs cover pnl-body" id="pnlBody" style="">
+            <div class="abs cover pnl-left">
+                <div class="abs cover pnl-msgs scroll" id="show">
+                    <div class="pnl-list" id="hists">
+                        <!-- 历史消息 -->
+                    </div>
+                    <div class="pnl-list" id="msgs">
+                        <div class="msg robot">
+                            <div class="msg-left" worker="小飞">
+                                <div class="msg-host photo" style="background-image: url(../image/robot-head.png)"></div>
+                                <div class="msg-ball">您好，我是疫情智能小助手“小飞”<br><br>请问您是想要了解哪些方面呢？</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pnl-list hide" id="unreadLine">
+                        <div class="msg min time unread">未读消息</div>
+                    </div>
+                </div>
+                <div class="abs bottom pnl-text">
+                    <div class="abs cover pnl-input">
+                        <label for="text"></label><textarea class="scroll" id="text" wrap="hard" placeholder="在此输入文字信息..."></textarea>
+                        <div class="abs atcom-pnl scroll hide" id="atcomPnl">
+                            <ul class="atcom" id="atcom"></ul>
+                        </div>
+                    </div>
+                    <div class="abs br pnl-btn" id="submit" style="background-color: rgb(32, 196, 202); color: rgb(255, 255, 255);"
+                         onclick="SendMsg()">发送</div>
+                </div>
+            </div>
+            <div class="abs right pnl-right">
+                <div class="slider-container hide"></div>
+                <div class="pnl-right-content">
+                    <div class="pnl-tabs">
+                        <div class="tab-btn active" id="hot-tab">常见问题</div>
+                    </div>
+                    <div class="pnl-hot">
+                        <p><b>·</b>&nbsp;&nbsp;&nbsp;如何向国务院提供疫情防控的线索？</p>
+                        <p><b>·</b>&nbsp;&nbsp;&nbsp;感染肺炎怎么求助？</p>
+                        <p><b>·</b>&nbsp;&nbsp;&nbsp;如何判断自己是否感染新型冠状病毒？</p>
+                        <p><b>·</b>&nbsp;&nbsp;&nbsp;疫情实时地图</p>
+                        <p><b>·</b>&nbsp;&nbsp;&nbsp;口罩如何选用？</p>
+                    </div>
+                    <div class="pnl-rel" style="display: none;">
+                        <ul class="rel-list unselect" id="rels">
+                            <!-- <li class="rel-item">这是一个问题，这是一个问题？</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="chat.js"></script>
+<script src="../little-robot/little-robot.js"></script>
+<script>
+    var Url =['../index.html','../news/news.html','../doctor/doctor.html','../visual-data/visual-data.html','../message/message.html'];
+    var logo = document.querySelectorAll('.go-home');
+    for (let i =0;i<logo.length;i++){
+        logo[i].onclick = function (e) {
+            e?e.stopPropagation():event.cancelBubble = true;
+            window.location.href=Url[i];
+        }
+    }
+    $('#open-menu').click(function (e) {
+        e?e.stopPropagation():event.cancelBubble = true;
+        $('.go-home').css('left','20px');
+        $('#open-menu').css('left','-80px');
+    });
+    $(document).click(function () {
+        $('.go-home').css('left','-200px');
+        $('#open-menu').css('left','20px');
+    });
+</script>
+</body>
+</html>

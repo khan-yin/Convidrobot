@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.little-robot{
+    z-index: 100;
+    position: fixed;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    bottom: 40px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border: 3px black solid;
+    border-radius: 25px;
+    background-color: #efeeee;
+    animation:normal-move 5s;
+    -moz-animation:normal-move 5s; /* Firefox */
+    -webkit-animation:normal-move 5s; /* Safari and Chrome */
+    -o-animation:normal-move 5s; /* Opera */
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+@keyframes normal-move {
+    10%{bottom:40px;}
+    13%{bottom: 45px;}
+    16%{bottom:40px;}
+    19%{bottom: 45px;}
+    22%{bottom:40px;}
+}
+.little-robot-eye{
+    position: relative;
+    top: 20px;
+    width: 12px;
+    height: 35px;
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 19px;
+    margin-right: 19px;
+    animation:little-blink 5s;
+    -moz-animation:little-blink 5s; /* Firefox */
+    -webkit-animation:little-blink 5s; /* Safari and Chrome */
+    -o-animation:little-blink 5s; /* Opera */
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@keyframes little-blink {
+    47%{height: 35px; top: 20px;width: 12px;}
+    50%{height: 2px; top: 30px;width: 15px;}
+    53%{height: 35px; top: 20px;width: 12px;}
+}
+.little-robot-mouth{
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: 20px;
+}
+.menu-box{
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-direction: column;
+    height: 250px;
+    width: 60px;
+    left: 42.5px;
+    bottom: 140px;
+}
+.menu-logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 5px;
+    bottom: -58px;
+    background-color: #efeeee;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.menu-border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: black 2px dashed;
+}
+.menu-border:hover{
+    animation:roll 1s;
+    -moz-animation:roll 1s linear 1; /* Firefox */
+    -webkit-animation:roll 1s linear 1; /* Safari and Chrome */
+    -o-animation:roll 1s linear 1; /* Opera */
+}
+@keyframes roll {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+.little-answer{
+    z-index: 100;
+    display: none;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 100px;
+    left: 160px;
+    height: 100px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 25px 25px 25px 0;
+    background-color: white;
+}
+.little-answer:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    bottom: -3px;
+    border: 15px solid;
+    border-color: transparent black black transparent;
+}
+.little-answer:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    bottom: 0;
+    border: 11px solid;
+    border-color: transparent white white transparent;
+}

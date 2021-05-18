@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>疫情智能助手“小飞”</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+<!--小飞机器人显示的对话框-->
+<div class="answer" id="rumor">
+    <div class="answer-text">
+        <h2 id="rumor-title" style="text-align: center;position: relative;top: 20px">.</h2>
+        <p><br/></p>
+        <p><br/></p>
+        <p id="rumor-summary" style="font-size: 1.3vw;">.</p>
+        <p><br/></p>
+        <p id="rumor-body">.</p>
+    </div>
+</div>
+<div class="answer" id="data">
+    <div class="answer-text">
+        <h2 id="data-title" style="line-height: 300%">安徽淮南的数据为：</h2>
+        <p id="data-content" style="line-height: 150%;white-space: pre;">总共确诊：000<br/>死亡：000<br/>死亡率：000<br/>治愈：000<br/>治愈率：000<br/>现存确诊：000<br/>疑似：000<p>
+        <img id="data-img" src="https://img1.dxycdn.com/2020/0320/340/3403077473293125942-135.png" style="width: 100%;position: absolute;bottom: 5%;display: none" alt="">
+    </div>
+</div>
+<!--小飞机器人-->
+<div class="robot">
+    <div class="eye eyeleft"></div>
+    <div class="eye eyeright"></div>
+</div>
+<!--问候、提示-->
+<div class="hello">
+    <p style="font-size: 1.6vw">下午好!<br/>我是新冠疫情智能助手小飞~<br/></p>
+    <p><br/>您可以问我：</p>
+    <p><b>·</b>  查询 国内/际 地名 -> 查询数据</p>
+    <p><b>·</b>  求证 问题 -> 为您在线辟谣</p>
+    <p><b>·</b>  更多 进入聊天室提供更多信息</p>
+    <p><br/>更多功能小飞还在努力学习~</p>
+</div>
+<form class="question-form" onsubmit="search()">
+    <label>
+        <input class="question">
+    </label>
+    <label>
+        <input type="text" style="display:none" />
+    </label>
+    <div class="question-line"></div>
+    <div class="search"></div>
+
+</form>
+<div class="nav-bar">
+    <div class="nav-box" id="tips">
+        <a href="news/news.html">
+            <img src="image/news.png" style="height: 40%;position: relative;top: 15%;right: 5%" alt="">
+            <p style="display: inline;position:relative;left: 5%;">疫情报道</p>
+        </a>
+    </div>
+    <div class="nav-box" id="check">
+        <a href="doctor/doctor.html">
+            <img src="image/AI.png" style="height: 40%;position: relative;top: 15%;right: 5%" alt="">
+            <p style="display: inline;position:relative;left: 5%;">AI诊断</p>
+        </a>
+    </div>
+    <div class="nav-box" id="visual-data">
+        <a href="visual-data/visual-data.html">
+            <img src="image/data.png" style="height: 40%;position: relative;top: 15%;right: 5%" alt="">
+            <p style="display: inline;position:relative;left: 5%;">心中有"数"</p>
+        </a>
+    </div>
+    <div class="nav-box" id="message">
+        <a href="message/message.html">
+            <img src="image/comment.png" style="height: 40%;position: relative;top: 15%;right: 5%" alt="">
+            <p style="display: inline;position:relative;left: 5%;">我有话说</p>
+        </a>
+    </div>
+</div>
+</body>
+<script src="home.js"></script>
+</html>
