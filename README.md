@@ -10,9 +10,9 @@
 在模块设计上，我们利用web灵活快捷的特点，针对以上需求分析设计了以下功能模块
 ![模块设计](https://img-blog.csdnimg.cn/20210518190444521.png)
 # 团队成员
-前端：[Wu Ruiqi](https://github.com/a1050562365)
-后端：[Yin Kehan](https://github.com/khannb)
-算法：[Xu Yuanfei](https://github.com/XuYuanFei01)
+前端：[Wu Ruiqi](https://github.com/a1050562365)  
+后端：[Yin Kehan](https://github.com/khannb)  
+算法：[Xu Yuanfei](https://github.com/XuYuanFei01)  
 # 界面展示
 ## 首页
 ![首页](https://img-blog.csdnimg.cn/2021051819045187.png)
